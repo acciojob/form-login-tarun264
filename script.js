@@ -1,12 +1,8 @@
-function getFormvalue() {
-	const firstNameInput= document.querySelector('input[name="fname"]');
-	const lastNameInput= document.querySelector('input [name="lname"]');
+function getFormvalue(event) {
+	event.preventDefault();
+	const firstNameInput= document.getElementById('fname').value;
+	const lastNameInput= document.getElementById('lname').value;
 
-	const fname=firstNameInput.value;
-	const lname= lastNameInput.value;
-
-	const fullName = '${fname} ${lname}';
-	alert('${fullName}');
-	
+	alert( firstNameInput+""+lastNameInput);	
 }
 
